@@ -163,6 +163,8 @@
     unrar
     gnome.file-roller
     killall
+    nix-index
+    gptfdisk
 
   # Development
     rustup
@@ -176,7 +178,13 @@
     arc-theme
     arc-icon-theme
     phinger-cursors
+    neofetch
   ];
+
+  # Terminal start
+  programs.bash.interactiveShellInit = ''
+    neofetch
+  '';
 
   fonts.fonts = with pkgs; [
     font-awesome
